@@ -12,4 +12,14 @@ The entire T1 sequence occurs at the network level, and no HTTP request is actua
 ```
 A name indicates what we seek. An address indicates where it is.
 ```
+######How DNS works
+step(DNS resolution): check the local DNS cache->DNS request->DNS response  
 
+Authozitative DNS request with full reursion:  
+Httpclient->user's primary DNS server->root domain servers->.com TLD servers->server's primary dns server  
+
+#####DNS and Global Server Load Balancing
+At the network level there are three main techniques for reducing response times:  
+- Reduce the amount of data packets going over the wire
+- Reduce the number of messages exchanged between the client and server
+- Move the content to a server closer to the client
